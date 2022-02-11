@@ -1,0 +1,23 @@
+:root {
+  --main-thm: #634ed4;
+  --main-thm-dark: #3c2d9f;
+  --main-thm-light: #7b67ee;
+  --main-thm-dark-bg: #434343;
+
+  --main-font: sans-serif;
+}
+
+body {
+  background-color: var(--main-thm);
+}
+.container {
+  width: 80%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.time-container {
+  background: var(--main-thm-dark-bg);
+}
