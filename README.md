@@ -5,7 +5,7 @@ A simple online clock that has the ability to tell you the time. https://acmegam
 ## Features
 
 - Tells you the time in 24 hours format.
-- Informs you today's date.
+- Informs you of today's date.
 
 ## Upcoming Features
 
