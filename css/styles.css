@@ -9,6 +9,7 @@
 
 body {
   background-color: var(--main-thm);
+  color: #fff;
 }
 .container {
   width: 80%;
