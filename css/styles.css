@@ -9,6 +9,7 @@
 
 body {
   background-color: var(--main-thm);
+  font-family: var(--main-font);
   color: #fff;
 }
 .container {
