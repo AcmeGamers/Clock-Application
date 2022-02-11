@@ -4,7 +4,7 @@
   --main-thm-light: #7b67ee;
   --main-thm-dark-bg: #434343;
 
-  --main-font: sans-serif;
+  --main-font: system-ui;
 }
 
 body {
@@ -22,4 +22,12 @@ body {
 
 .time-container {
   background: var(--main-thm-dark-bg);
+}
+#time {
+  font-size: 9vw;
+}
+#date {
+  font-size: 3vw;
+  font-weight: 100;
+  margin-top: 15px;
 }

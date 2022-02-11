@@ -8,14 +8,90 @@
     <link rel="stylesheet" href="css/custom-styles.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
+  <body class="flex column verti-center vh-100 no-margin">
     <div class="container column horiz-center">
       <h1>The Most Basic Time Clock</h1>
-      <div class="time-container column horiz-center full-width">
-        <h2 id="time">Current Time</h2>
-        <p id="date">Date</p>
+      <div
+        class="time-container column horiz-center verti-center full-width vh-50"
+      >
+        <h2 id="time" class="no-margin">19 : 20 : 56 AM</h2>
+        <p id="date" class="no-margin">20 Nov 2022</p>
       </div>
-      <h3>Made By Acme Gamers</h3>
+      <p>Made By Acme Gamers</p>
     </div>
+
+    <script>
+      var today = new Date();
+      switch (today.getMonth() + 1) {
+        case 1:
+          month = "January";
+          break;
+        case 2:
+          month = "February";
+          break;
+        case 3:
+          month = "March";
+          break;
+        case 4:
+          month = "April";
+          break;
+        case 5:
+          month = "May";
+          break;
+        case 6:
+          month = "June";
+          break;
+        case 7:
+          month = "July";
+          break;
+        case 8:
+          month = "August";
+          break;
+        case 9:
+          month = "September";
+          break;
+        case 10:
+          month = "October";
+          break;
+        case 11:
+          month = "November";
+          break;
+        case 12:
+          month = "December";
+      }
+      var date = today.getDate() + " " + month + ", " + today.getFullYear();
+
+      // update the time every second
+      var t = setInterval(function () {
+        // get minutes, seconds, and hours that updates each second
+        var hours = today.getHours();
+        var minutes = today.getMinutes();
+        var seconds = today.getSeconds();
+        // adding zero in front of numbers < 10
+        minutes = checkTime(minutes);
+        seconds = checkTime(seconds);
+        // display the time
+        document.getElementById("time").innerHTML =
+          hours + " : " + minutes + " : " + seconds + " " + ampm(hours);
+        document.getElementById("date").innerHTML = date;
+      }, 1000);
+
+      // Add zero in front of numbers < 10
+      function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i;
+        }
+        return i;
+      }
+
+      // add AM or PM to the time
+      function ampm(hours) {
+        if (hours < 12) {
+          return "AM";
+        } else {
+          return "PM";
+        }
+      }
+    </script>
   </body>
 </html>
